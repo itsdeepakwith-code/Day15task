@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Form and Table</title>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <form id="myForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" class="form-control" id="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pinCode">Pin Code:</label>
+        <input type="text" class="form-control" id="pinCode" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Choice of Food (Select at least 2):</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="food" id="food1" value="Chicken biryani">
+          <label class="form-check-label" for="food1">Chicken biryani</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="food" id="food2" value="Mutton biryani">
+          <label class="form-check-label" for="food2">Mutton biryani</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="food" id="food2" value="Curd rice">
+            <label class="form-check-label" for="food3">Curd rice</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="food" id="food2" value="Venison biryani">
+            <label class="form-check-label" for="food"4>Venison biryani</label>
+          </div>
+        <!-- For more food options -->
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" class="form-control" id="state" required>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" class="form-control" id="country" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+    </form>
+
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>Pin Code</th>
+          <th>Gender</th>
+          <th>Food</th>
+          <th>State</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody id="dataTableBody"></tbody>
+    </table>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
